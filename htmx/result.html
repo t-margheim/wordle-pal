@@ -1,0 +1,6 @@
+<h1>{{.Target}}</h1>
+<ul>
+    {{range .Response.GuessResults}}
+    <li>{{.Guess}}<br>{{.Result}}<br>{{.PreviousWordCount}}</li>
+    {{end}}
+</ul>
