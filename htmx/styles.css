@@ -1,0 +1,111 @@
+.guess_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color: blue; */
+}
+
+.guess_display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color: red; */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 10px;
+
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color: green; */
+}
+
+.section_header {
+    text-align: center;
+    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
+
+
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color: green; */
+}
+
+.row {
+    padding: 3px;
+
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color: purple; */
+}
+
+button {
+    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
+    font-weight: bold;
+    font-size: large;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    /* border-style: dashed;
+    border-width: 1px;
+    border-color: cyan; */
+}
+
+.tile {
+    width: 40px;
+    /* font-size: xx-large;
+    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial'; */
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    border-width: 0px;
+}
+
+.tile_text {
+    font-size: xx-large;
+    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
+    font-weight: bold;
+}
+
+.input {
+    background-color: lightgray;
+    color: black;
+    width: 240px;
+    font-size: xx-large;
+    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-width: 0px;
+}
+
+.wrong {
+    background-color: #787c7f;
+}
+
+.wrong_position {
+    background-color: #c8b653;
+}
+
+.correct {
+    background-color: #6ca965;
+}
+
+h1 {
+    color: blue
+}

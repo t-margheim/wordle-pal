@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <form class="guess_input">
+        <!-- Inputtable -->
+        <h2 class="section_header">ANSWER</h2>
+        <div class="row">
+            <input id="answer" class="input" type="text" maxlength="5">
+            <br>
+        </div>
+
+        <h2 class=" section_header">GUESSES</h2>
+        <div class="row">
+            <input id="guess_1" class="input" type="text" maxlength="5">
+            <br>
+        </div>
+        <div class="row">
+            <input id="guess_2" class="input" type="text" maxlength="5">
+            <br>
+        </div>
+        <div class="row">
+            <input id="guess_3" class="input" type="text" maxlength="5">
+            <br>
+        </div>
+        <div class="row">
+            <input id="guess_4" class="input" type="text" maxlength="5">
+            <br>
+        </div>
+        <div class="row">
+            <input id="guess_5" class="input" type="text" maxlength="5">
+            <br>
+        </div>
+        <div class="row">
+            <input id="guess_6" class="input" type="text" maxlength="5">
+            <br>
+        </div>
+        <!-- <div class="row"> -->
+        <button>ANALYZE</button>
+        <!-- </div> -->
+    </form>
+
+    <div class="guess_display">
+        <div class="column">
+            <!-- Guess 1 -->
+            <div class="row">
+                <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="a">
+                <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="r">
+                <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
+                <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="s">
+                <input class="tile tile_text wrong" disabled="true" type=" text" maxlength="1" value="e">
+            </div>
+            <!-- Guess 2 -->
+            <div class="row">
+                <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="f">
+                <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
+                <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="u">
+                <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="n">
+                <input class="tile tile_text wrong" disabled="true" type=" text" maxlength="1" value="d">
+            </div>
+            <!-- Guess 3 -->
+            <div class="row">
+                <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="k">
+                <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="n">
+                <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
+                <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="w">
+                <input class="tile tile_text correct" disabled="true" type=" text" maxlength="1" value="n">
+            </div>
+
+            <!-- Target -->
+            <div class="row">
+                <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="O">
+                <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="N">
+                <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="i">
+                <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="o">
+                <input class="tile tile_text correct" disabled="true" type=" text" maxlength="1" value="n">
+            </div>
+        </div>
+        <div class="column">
+            <div class="row tile_text">
+                95%
+            </div>
+            <div class="row tile_text">
+                95%
+            </div>
+            <div class="row tile_text">
+                95%
+            </div>
+            <div class="row tile_text">
+                95%
+            </div>
+        </div>
+
+    </div>
