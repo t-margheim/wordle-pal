@@ -73,7 +73,7 @@ func scoreWord(guess, target string) result {
 				guessAttr,
 				targetAttr,
 			)
-			res[i] = correct
+			res[i] = Correct
 			continue
 		}
 
@@ -85,7 +85,7 @@ func scoreWord(guess, target string) result {
 				guessAttr,
 				targetAttr,
 			)
-			res[i] = wrongPosition
+			res[i] = WrongPosition
 			continue
 		}
 		slog.Debug("letter is not in word",
@@ -95,7 +95,7 @@ func scoreWord(guess, target string) result {
 			guessAttr,
 			targetAttr,
 		)
-		res[i] = notInWord
+		res[i] = NotInWord
 	}
 	slog.Debug("ScoreWord finished",
 		guessAttr,
@@ -113,11 +113,11 @@ func filterWordList(guess string, res result, wordlist []string) []string {
 	for i, resChar := range res {
 		guessLetter := guess[i]
 		switch resChar {
-		case correct:
+		case Correct:
 			mustMatch[i] = guessLetter
-		case wrongPosition:
+		case WrongPosition:
 			mustContainButNotMatch[guessLetter] = i
-		case notInWord:
+		case NotInWord:
 			mustNotContain = append(mustNotContain, guessLetter)
 		}
 	}
@@ -127,6 +127,8 @@ func filterWordList(guess string, res result, wordlist []string) []string {
 		"mustContainButNotMatch", mustContainButNotMatch,
 		"mustNotContain", mustNotContain,
 	)
+
+	oldCount := len(wordlist)
 
 WordLoop:
 	for _, word := range wordlist {
@@ -157,5 +159,10 @@ WordLoop:
 		newList = append(newList, word)
 
 	}
+	newCount := len(newList)
+	slog.Debug("filtering finished",
+		slog.Int("old_count", oldCount),
+		slog.Int("new_count", newCount),
+	)
 	return newList
 }

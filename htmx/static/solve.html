@@ -1,6 +1,12 @@
-<div>
-    <p>Please input the answer:</p>
-    <form class="guess_input" hx-put="/analyze">
+<div id="game_input">
+    <p class="display_text instructions">
+        This tool analyzes your guesses in a given game of A-Popular-Word-Game
+        and provides feedback on the effectiveness of each guess. First, enter
+        the answer from the game that you would like to analyze. Then, enter
+        your guesses in order in each line that you need. Finally, press enter
+        or click "Analyze" to see how you did.
+    </p>
+    <form class="guess_input" hx-put="/analyze" hx-target="#game_input">
         <!-- Inputtable -->
         <h2 class="section_header">ANSWER</h2>
         <input name="answer" class="form_input row" type="text" maxlength="5"><br>
@@ -12,6 +18,6 @@
         <input name="guess_4" class="form_input row" type="text" maxlength="5"><br>
         <input name="guess_5" class="form_input row" type="text" maxlength="5"><br>
         <input name="guess_6" class="form_input row" type="text" maxlength="5"><br>
-        <button>ANALYZE</button>
+        <button class="display_text">ANALYZE</button>
     </form>
 </div>

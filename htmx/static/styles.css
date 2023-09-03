@@ -12,7 +12,7 @@
 
 .guess_display {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 20px;
@@ -24,9 +24,8 @@
 
 .column {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    align-content: center;
 
     margin-left: 10px;
 
@@ -47,6 +46,8 @@
 
 .row {
     padding: 3px;
+    display: flex;
+    flex-direction: row;
 
     /* border-style: dashed;
     border-width: 1px;
@@ -64,10 +65,9 @@ button {
     border-color: cyan; */
 }
 
-.text {
+.display_text {
     font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
     font-weight: bold;
-    font-variant-caps: petite-caps;
 }
 
 .tile {
@@ -78,6 +78,15 @@ button {
     font-weight: bold;
     color: white;
     border-width: 0px;
+}
+
+.result {
+    font-size: xx-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    width: 112px;
 }
 
 .form_input {
@@ -102,4 +111,17 @@ button {
 
 .correct {
     background-color: #6ca965;
+}
+
+.invalid {
+    background-color: red;
+}
+
+.instructions {
+    font-weight: normal;
+}
+
+.page_title {
+    font-variant-caps: petite-caps;
+    text-align: center;
 }

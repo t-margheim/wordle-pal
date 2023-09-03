@@ -1,9 +1,9 @@
 package pathreview
 
-type letterFeedback int
+type LetterFeedback int
 
 const (
-	notInWord letterFeedback = iota + 1
-	wrongPosition
-	correct
+	NotInWord LetterFeedback = iota + 1
+	WrongPosition
+	Correct
 )

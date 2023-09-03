@@ -1,4 +1,4 @@
-package main
+package webserver
 
 import (
 	"fmt"
@@ -73,14 +73,9 @@ func (h *handler) Analyze(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	type htmlResponse struct {
-		Response pathreview.PathResponse
-		Target   string
-	}
-	hResp := htmlResponse{
-		Response: resp,
-		Target:   target,
-	}
+	hResp := newAnalyzeResponse(target, resp)
+	slog.Debug("analysis prepped", slog.Any("response", hResp))
+
 	err = h.resultTemplate.Execute(w, hResp)
 	if err != nil {
 		slog.Error("failed to generate response", slog.String("error", err.Error()))

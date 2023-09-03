@@ -5,6 +5,8 @@ import (
 	"log"
 	"log/slog"
 	"net/http"
+
+	"github.com/t-margheim/wordle-pal/internal/webserver"
 )
 
 var (
@@ -19,7 +21,7 @@ func main() {
 		slog.String("listen_address", *listen),
 	)
 
-	handler, err := NewHandler()
+	handler, err := webserver.NewHandler()
 	if err != nil {
 		log.Fatalln(err)
 	}

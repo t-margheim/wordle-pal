@@ -1,59 +1,34 @@
-<h1>{{.Target}}</h1>
-<ul>
-    {{range .Response.GuessResults}}
-    <li>{{.Guess}}<br>{{.Result}}<br>{{.PreviousWordCount}}</li>
+<div id="analysis" class="guess_display">
+
+    <!-- Guesses -->
+    {{range .Guesses}}
+    <div class="row">
+        <div class="column">
+            {{range .Guess}}
+            <input class="tile display_text {{.Class}}" disabled="true" type="text" maxlength="1" value="{{.Value}}">
+            {{end}}
+        </div>
+        <div class="column">
+            <div class="row display_text result">
+                {{.Percentage}}%
+            </div>
+        </div>
+    </div>
     {{end}}
-</ul>
 
-<div class="guess_display">
-    <div class="column">
-        <!-- Guess 1 -->
-        <div class="row">
-            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="a">
-            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="r">
-            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
-            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="s">
-            <input class="tile tile_text wrong" disabled="true" type=" text" maxlength="1" value="e">
+    <!-- Answer -->
+    <div class="row">
+        <div class="column">
+            {{range .TargetLetters}}
+            <input class="tile display_text correct" disabled="true" type="text" maxlength="1" value="{{.}}">
+            {{end}}
         </div>
-        <!-- Guess 2 -->
-        <div class="row">
-            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="f">
-            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
-            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="u">
-            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="n">
-            <input class="tile tile_text wrong" disabled="true" type=" text" maxlength="1" value="d">
-        </div>
-        <!-- Guess 3 -->
-        <div class="row">
-            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="k">
-            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="n">
-            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
-            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="w">
-            <input class="tile tile_text correct" disabled="true" type=" text" maxlength="1" value="n">
-        </div>
-
-        <!-- Answer -->
-        <div class="row">
-            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="O">
-            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="N">
-            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="i">
-            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="o">
-            <input class="tile tile_text correct" disabled="true" type=" text" maxlength="1" value="n">
+        <div class="column">
+            <div class="row display_text result">
+            </div>
         </div>
     </div>
-    <div class="column">
-        <div class="row tile_text">
-            95%
-        </div>
-        <div class="row tile_text">
-            95%
-        </div>
-        <div class="row tile_text">
-            95%
-        </div>
-        <div class="row tile_text">
-            95%
-        </div>
-    </div>
+
+    <button class="display_text" hx-get="/static/solve.html" hx-target="#analysis">DO ANOTHER</button>
 
 </div>
