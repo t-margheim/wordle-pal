@@ -4,3 +4,56 @@
     <li>{{.Guess}}<br>{{.Result}}<br>{{.PreviousWordCount}}</li>
     {{end}}
 </ul>
+
+<div class="guess_display">
+    <div class="column">
+        <!-- Guess 1 -->
+        <div class="row">
+            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="a">
+            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="r">
+            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
+            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="s">
+            <input class="tile tile_text wrong" disabled="true" type=" text" maxlength="1" value="e">
+        </div>
+        <!-- Guess 2 -->
+        <div class="row">
+            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="f">
+            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
+            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="u">
+            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="n">
+            <input class="tile tile_text wrong" disabled="true" type=" text" maxlength="1" value="d">
+        </div>
+        <!-- Guess 3 -->
+        <div class="row">
+            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="k">
+            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="n">
+            <input class="tile tile_text wrong_position" disabled="true" type="text" maxlength="1" value="o">
+            <input class="tile tile_text wrong" disabled="true" type="text" maxlength="1" value="w">
+            <input class="tile tile_text correct" disabled="true" type=" text" maxlength="1" value="n">
+        </div>
+
+        <!-- Answer -->
+        <div class="row">
+            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="O">
+            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="N">
+            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="i">
+            <input class="tile tile_text correct" disabled="true" type="text" maxlength="1" value="o">
+            <input class="tile tile_text correct" disabled="true" type=" text" maxlength="1" value="n">
+        </div>
+    </div>
+    <div class="column">
+        <div class="row tile_text">
+            95%
+        </div>
+        <div class="row tile_text">
+            95%
+        </div>
+        <div class="row tile_text">
+            95%
+        </div>
+        <div class="row tile_text">
+            95%
+        </div>
+    </div>
+
+</div>

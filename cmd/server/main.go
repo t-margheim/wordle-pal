@@ -24,6 +24,11 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	err = http.ListenAndServe(*listen, addLogMiddleware(handler))
+	fs := http.FileServer(http.Dir("htmx/static"))
+	http.Handle("/static/", addLogMiddleware(http.StripPrefix("/static/", fs)))
+	http.Handle("/analyze", addLogMiddleware(http.HandlerFunc(handler.Analyze)))
+	http.Handle("/", addLogMiddleware(fs))
+
+	err = http.ListenAndServe(*listen, nil)
 	log.Fatalln(err)
 }

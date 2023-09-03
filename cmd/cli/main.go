@@ -5,7 +5,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/t-margheim/wordle-pal/pkg/pathreview"
+	"github.com/t-margheim/wordle-pal/internal/pathreview"
 )
 
 func main() {

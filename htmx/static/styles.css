@@ -54,8 +54,7 @@
 }
 
 button {
-    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
-    font-weight: bold;
+
     font-size: large;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -65,10 +64,15 @@ button {
     border-color: cyan; */
 }
 
+.text {
+    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
+    font-weight: bold;
+    font-variant-caps: petite-caps;
+}
+
 .tile {
     width: 40px;
-    /* font-size: xx-large;
-    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial'; */
+    font-size: xx-large;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
@@ -76,13 +80,7 @@ button {
     border-width: 0px;
 }
 
-.tile_text {
-    font-size: xx-large;
-    font-family: 'Clear Sans', 'Helvetica Neue', 'Arial';
-    font-weight: bold;
-}
-
-.input {
+.form_input {
     background-color: lightgray;
     color: black;
     width: 240px;
@@ -104,8 +102,4 @@ button {
 
 .correct {
     background-color: #6ca965;
-}
-
-h1 {
-    color: blue
 }
